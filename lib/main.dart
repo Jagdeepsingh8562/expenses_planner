@@ -1,6 +1,9 @@
+import 'package:expenses_planner/screens/Home.dart';
 import 'package:flutter/material.dart';
-
+// import 'package:flutter/services.dart';
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]);
   runApp(MyApp());
 }
 
@@ -9,32 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Expensess Planner',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: 'OpenSans',
       ),
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Expensess Planner'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Card(child: Text('CHART'),),
-            Card(child: Text('LISTVIEW'),)
-          ],
-        ),
-      ),
-    );
-  }
-}
