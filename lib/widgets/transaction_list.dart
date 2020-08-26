@@ -11,7 +11,6 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 390,
-      padding: EdgeInsets.all(8),
       child: transactions.isEmpty
           ? LayoutBuilder(builder: (ctx,constraints){
             return Column(

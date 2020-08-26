@@ -97,7 +97,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   _switchval
                   ? txChartview
                   : txListview,
-                if(!_isLandsape)txChartview,if(!_isLandsape)txListview
+                if(!_isLandsape)txChartview,if(!_isLandsape)Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: txListview,
+                )
               
             ],
           ),
